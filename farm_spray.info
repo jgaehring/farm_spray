@@ -1,0 +1,4 @@
+name = Spray Field Module
+description = A field module for recording spraying activities.
+core = 7.x
+dependencies[] = farm_client

@@ -1,0 +1,19 @@
+<?php
+
+/**
+ * Spray Field Module
+ */
+
+/**
+ * Implements hook_farm_client_module_info()
+ */
+function farm_spray_farm_client_module_info() {
+  return array(
+    'spray' => array(
+      'name' => 'spray',
+      'label' => t('Spray Field Module'),
+      'js' => drupal_get_path('module', 'farm_spray') . '/dist/FieldModule/Spray/index.js',
+    ),
+  );
+}
+
