@@ -1,6 +1,8 @@
+import SprayWidget from './components/SprayWidget';
 import Spray from './components/Spray';
 import SprayMenuBar from './components/SprayMenuBar';
-import SprayWidget from './components/SprayWidget';
+import SprayLog from './components/SprayLog';
+import SprayLogMenuBar from './components/SprayLogMenuBar';
 
 export default {
   name: 'spray',
@@ -13,6 +15,14 @@ export default {
       components: {
         default: Spray,
         menubar: SprayMenuBar,
+      },
+    },
+    {
+      name: 'spray-log',
+      path: '/spray/1',
+      components: {
+        default: SprayLog,
+        menubar: SprayLogMenuBar,
       },
     },
   ],
