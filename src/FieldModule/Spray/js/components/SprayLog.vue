@@ -13,6 +13,38 @@
               :name="'Pre Emerge - North Field - Corn 2020'"
               :done="false"
               :timestamp="'June 10, 2020'"/>
+            <farm-card
+              :breakpoints="[0, 600, 900]"
+              :boxShadow="['none', '1px 2px 3px rgba(0, 0, 0, 0.25)']"
+              class="spray-log-card">
+              <h5>Duration</h5>
+              <farm-row class="duration">
+                <div class="start">
+                  <div class="top">
+                    10:45 AM
+                  </div>
+                  <div class="bottom">
+                    Start
+                  </div>
+                </div>
+                <div class="stop">
+                  <div class="top">
+                    1:00 PM
+                  </div>
+                  <div class="bottom">
+                    Stop
+                  </div>
+                </div>
+                <div class="total">
+                  <div class="top">
+                    2:15
+                  </div>
+                  <div class="bottom">
+                    Total
+                  </div>
+                </div>
+              </farm-row>
+            </farm-card>
           </farm-tiles>
         </div>
       </template>
@@ -45,6 +77,36 @@ export default {
   margin: auto;
   background-color: #eee;
   padding: 0;
+}
+
+.spray-log-card {
+  border: 1px solid #eee;
+}
+
+.duration>div {
+  flex: 1 1 33.3333%;
+  height: 6rem;
+  margin-right: 1rem;
+}
+.duration>div:last-child {
+  margin-right: 0;
+}
+.top {
+  height: 4rem;
+  width: 100%;
+  padding: 1.25rem 0;
+  border-bottom: black solid 2px;
+  text-align: center;
+  font-size: 1.5rem;
+  line-height: 1.5rem;
+}
+.bottom {
+  padding: .5625rem 0;
+  text-align: center;
+  font-size: .875rem;
+  line-height: .875rem;
+  text-transform: uppercase;
+  letter-spacing: .25rem;
 }
 
 @media (min-width: 600px) {
