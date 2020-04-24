@@ -17,33 +17,35 @@
               :breakpoints="[0, 600, 900]"
               :boxShadow="['none', '1px 2px 3px rgba(0, 0, 0, 0.25)']"
               class="spray-log-card">
-              <h5>Duration</h5>
-              <farm-row class="duration">
-                <div class="start">
-                  <div class="top">
-                    10:45 AM
+              <farm-stack>
+                <h5>Duration</h5>
+                <farm-inline justifyContent="center">
+                  <div :style="styleDivisionBar">
+                    <div class="top">
+                      10:45 AM
+                    </div>
+                    <div class="bottom">
+                      Start
+                    </div>
                   </div>
-                  <div class="bottom">
-                    Start
+                  <div :style="styleDivisionBar">
+                    <div class="top">
+                      1:00 PM
+                    </div>
+                    <div class="bottom">
+                      Stop
+                    </div>
                   </div>
-                </div>
-                <div class="stop">
-                  <div class="top">
-                    1:00 PM
+                  <div :style="styleDivisionBar">
+                    <div class="top">
+                      2:15
+                    </div>
+                    <div class="bottom">
+                      Total
+                    </div>
                   </div>
-                  <div class="bottom">
-                    Stop
-                  </div>
-                </div>
-                <div class="total">
-                  <div class="top">
-                    2:15
-                  </div>
-                  <div class="bottom">
-                    Total
-                  </div>
-                </div>
-              </farm-row>
+                </farm-inline>
+              </farm-stack>
             </farm-card>
           </farm-tiles>
         </div>
@@ -63,6 +65,15 @@
 <script>
 export default {
   name: 'SprayLog',
+  data() {
+    return {
+      styleDivisionBar: {
+        flex: '0 0 auto',
+        minWidth: '7rem',
+        maxWidth: '50%',
+      },
+    };
+  },
 };
 </script>
 
@@ -83,14 +94,6 @@ export default {
   border: 1px solid #eee;
 }
 
-.duration>div {
-  flex: 1 1 33.3333%;
-  height: 6rem;
-  margin-right: 1rem;
-}
-.duration>div:last-child {
-  margin-right: 0;
-}
 .top {
   height: 4rem;
   width: 100%;
