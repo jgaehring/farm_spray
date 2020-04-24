@@ -47,6 +47,48 @@
                 </farm-inline>
               </farm-stack>
             </farm-card>
+            <farm-card
+              :breakpoints="[0, 600, 900]"
+              :boxShadow="['none', '1px 2px 3px rgba(0, 0, 0, 0.25)']"
+              class="spray-log-card">
+              <farm-stack>
+                <h5>Spray Rate</h5>
+                <farm-inline>
+                  <div>
+                    <p><strong>Material:</strong> Corn Pre 2020</p>
+                  </div>
+                  <div>
+                    <p><strong>Units:</strong> gal/ac</p>
+                  </div>
+                </farm-inline>
+                <farm-inline justifyContent="center">
+                  <div :style="styleDivisionBar">
+                    <div class="top">
+                      25
+                    </div>
+                    <div class="bottom">
+                      Target
+                    </div>
+                  </div>
+                  <div :style="styleDivisionBar">
+                    <div class="top">
+                      23.7
+                    </div>
+                    <div class="bottom">
+                      Actual
+                    </div>
+                  </div>
+                  <div :style="styleDivisionBar">
+                    <div class="top">
+                      -1.3
+                    </div>
+                    <div class="bottom">
+                      Variance
+                    </div>
+                  </div>
+                </farm-inline>
+              </farm-stack>
+            </farm-card>
           </farm-tiles>
         </div>
       </template>
