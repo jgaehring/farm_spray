@@ -7,20 +7,20 @@
         <div class="container-fluid">
           <farm-tiles
             :columns="[1, 2, 3]"
-            :breakpoints="[0, 600, 900]"
+            :breakpoints="breakpoints"
             :space="['0', '1rem']">
             <farm-log-main-info
               :name="'Pre Emerge - North Field - Corn 2020'"
               :done="false"
               :timestamp="'June 10, 2020'"/>
             <farm-card
-              :breakpoints="[0, 600, 900]"
+              :breakpoints="breakpoints"
               :boxShadow="['none', '1px 2px 3px rgba(0, 0, 0, 0.25)']"
               class="spray-log-card">
               <farm-stack>
                 <h5>Duration</h5>
-                <farm-inline justifyContent="center">
-                  <div :style="styleDivisionBar">
+                <farm-inline justifyContent="space-around" class="inline">
+                  <div class="division-bar" :flex="divisionBarFlex">
                     <div class="top">
                       10:45 AM
                     </div>
@@ -28,15 +28,15 @@
                       Start
                     </div>
                   </div>
-                  <div :style="styleDivisionBar">
+                  <div class="division-bar" :flex="divisionBarFlex">
                     <div class="top">
-                      1:00 PM
+                      12:00 PM
                     </div>
                     <div class="bottom">
                       Stop
                     </div>
                   </div>
-                  <div :style="styleDivisionBar">
+                  <div class="division-bar total" :flex="divisionBarFlex">
                     <div class="top">
                       2:15
                     </div>
@@ -48,7 +48,7 @@
               </farm-stack>
             </farm-card>
             <farm-card
-              :breakpoints="[0, 600, 900]"
+              :breakpoints="breakpoints"
               :boxShadow="['none', '1px 2px 3px rgba(0, 0, 0, 0.25)']"
               class="spray-log-card">
               <farm-stack>
@@ -61,8 +61,8 @@
                     <p><strong>Units:</strong> gal/ac</p>
                   </div>
                 </farm-inline>
-                <farm-inline justifyContent="center">
-                  <div :style="styleDivisionBar">
+                <farm-inline justifyContent="space-around" class="inline">
+                  <div class="division-bar" :flex="divisionBarFlex">
                     <div class="top">
                       25
                     </div>
@@ -70,7 +70,7 @@
                       Target
                     </div>
                   </div>
-                  <div :style="styleDivisionBar">
+                  <div class="division-bar" :flex="divisionBarFlex">
                     <div class="top">
                       23.7
                     </div>
@@ -78,7 +78,7 @@
                       Actual
                     </div>
                   </div>
-                  <div :style="styleDivisionBar">
+                  <div class="division-bar" :flex="divisionBarFlex">
                     <div class="top">
                       -1.3
                     </div>
@@ -109,11 +109,8 @@ export default {
   name: 'SprayLog',
   data() {
     return {
-      styleDivisionBar: {
-        flex: '0 0 auto',
-        minWidth: '7rem',
-        maxWidth: '50%',
-      },
+      breakpoints: [0, 750, 1050],
+      divisionBarFlex: '1 1 auto',
     };
   },
 };
@@ -136,14 +133,23 @@ export default {
   border: 1px solid #eee;
 }
 
+.inline {
+  text-align: center;
+}
+.division-bar {
+  display: inline-block;
+  width: 100%;
+  white-space: nowrap;
+  max-width: 8rem;
+}
 .top {
   height: 4rem;
   width: 100%;
   padding: 1.25rem 0;
   border-bottom: black solid 2px;
   text-align: center;
-  font-size: 1.5rem;
-  line-height: 1.5rem;
+  font-size: 1.375rem;
+  line-height: 1.375rem;
 }
 .bottom {
   padding: .5625rem 0;
@@ -154,7 +160,7 @@ export default {
   letter-spacing: .25rem;
 }
 
-@media (min-width: 600px) {
+@media (min-width: 750px) {
   .container-fluid {
     padding: 1rem;
   }
