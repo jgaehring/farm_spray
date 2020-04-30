@@ -15,7 +15,7 @@
               :timestamp="'June 10, 2020'"/>
             <farm-card
               :breakpoints="breakpoints"
-              :boxShadow="['none', '1px 2px 3px rgba(0, 0, 0, 0.25)']"
+              :boxShadow="cardBoxShadow"
               class="spray-log-card">
               <farm-stack>
                 <h5>Duration</h5>
@@ -49,7 +49,7 @@
             </farm-card>
             <farm-card
               :breakpoints="breakpoints"
-              :boxShadow="['none', '1px 2px 3px rgba(0, 0, 0, 0.25)']"
+              :boxShadow="cardBoxShadow"
               class="spray-log-card">
               <farm-stack>
                 <h5>Spray Rate</h5>
@@ -89,6 +89,56 @@
                 </farm-inline>
               </farm-stack>
             </farm-card>
+            <farm-card
+              :breakpoints="breakpoints"
+              :boxShadow="cardBoxShadow"
+              class="spray-log-card">
+              <farm-stack space="1rem">
+                <div>
+                  <h5>Areas</h5>
+                  <farm-inline>
+                    <farm-chip>North Field</farm-chip>
+                    <div class="add-circle">
+                      <icon-add-circle-outline/>
+                    </div>
+                  </farm-inline>
+                </div>
+                <div>
+                  <h5>Assets</h5>
+                  <farm-inline>
+                    <farm-chip>Corn 2020</farm-chip>
+                    <div class="add-circle">
+                      <icon-add-circle-outline/>
+                    </div>
+                  </farm-inline>
+                </div>
+                <div>
+                  <h5>Equipment</h5>
+                  <farm-inline>
+                    <farm-chip>SP300F Sprayer</farm-chip>
+                    <farm-chip>Deere Tractor</farm-chip>
+                    <div class="add-circle">
+                      <icon-add-circle-outline/>
+                    </div>
+                  </farm-inline>
+                </div>
+              </farm-stack>
+            </farm-card>
+            <farm-card
+              :breakpoints="breakpoints"
+              :boxShadow="cardBoxShadow"
+              class="spray-log-card">
+              <farm-stack>
+                <h5>Team</h5>
+                <farm-inline>
+                  <farm-chip color="green">Bob Smith</farm-chip>
+                  <farm-chip color="green">Joe Schmoe</farm-chip>
+                  <div class="add-circle">
+                    <icon-add-circle-outline/>
+                  </div>
+                </farm-inline>
+              </farm-stack>
+            </farm-card>
           </farm-tiles>
         </div>
       </template>
@@ -110,6 +160,7 @@ export default {
   data() {
     return {
       breakpoints: [0, 750, 1050],
+      cardBoxShadow: ['none', '1px 2px 3px rgba(0, 0, 0, 0.25)'],
       divisionBarFlex: '1 1 auto',
     };
   },
@@ -158,6 +209,10 @@ export default {
   line-height: .875rem;
   text-transform: uppercase;
   letter-spacing: .25rem;
+}
+.add-circle {
+  padding-top: .25rem;
+  fill: #555;
 }
 
 @media (min-width: 750px) {
