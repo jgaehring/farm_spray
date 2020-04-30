@@ -139,6 +139,15 @@
                 </farm-inline>
               </farm-stack>
             </farm-card>
+            <farm-card>
+              <farm-stack>
+                <h5>Notes</h5>
+                <p class="notes">
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                  do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                </p>
+              </farm-stack>
+            </farm-card>
           </farm-tiles>
         </div>
       </template>
@@ -213,6 +222,12 @@ export default {
 .add-circle {
   padding-top: .25rem;
   fill: #555;
+}
+
+.notes {
+  font-size: .875rem;
+  color: #555;
+  margin-bottom: 0;
 }
 
 @media (min-width: 750px) {
