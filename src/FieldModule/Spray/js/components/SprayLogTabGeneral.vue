@@ -12,7 +12,7 @@
         :breakpoints="breakpoints"
         :boxShadow="cardBoxShadow"
         class="spray-log-card">
-        <farm-stack>
+        <farm-stack space="1rem">
           <h5>Duration</h5>
           <farm-inline justifyContent="space-around" class="inline">
             <div class="division-bar" :flex="divisionBarFlex">
@@ -46,14 +46,29 @@
         :breakpoints="breakpoints"
         :boxShadow="cardBoxShadow"
         class="spray-log-card">
-        <farm-stack>
+        <farm-stack space="1rem">
           <h5>Spray Rate</h5>
           <farm-inline>
-            <div>
-              <p><strong>Material:</strong> Corn Pre 2020</p>
+            <div flex="1 1 auto">
+              <p>
+                <strong>Material:</strong>
+                &nbsp;
+                <span class="spray-details">Pre 2020</span>
+              </p>
             </div>
-            <div>
-              <p><strong>Units:</strong> gal/ac</p>
+            <div flex="1 1 auto">
+              <p>
+                <strong>Units:</strong>
+                &nbsp;
+                <span class="spray-details">gal/ac</span>
+              </p>
+            </div>
+            <div flex="1 1 auto">
+              <p>
+                <strong>Total Acreage:</strong>
+                &nbsp;
+                <span class="spray-details">106.2</span>
+              </p>
             </div>
           </farm-inline>
           <farm-inline justifyContent="space-around" class="inline">
@@ -89,41 +104,35 @@
         :boxShadow="cardBoxShadow"
         class="spray-log-card">
         <farm-stack space="1rem">
-          <div>
-            <h5>Areas</h5>
-            <farm-inline>
-              <farm-chip>North Field</farm-chip>
-              <div class="add-circle">
-                <icon-add-circle-outline/>
-              </div>
-            </farm-inline>
-          </div>
-          <div>
-            <h5>Assets</h5>
-            <farm-inline>
-              <farm-chip>Corn 2020</farm-chip>
-              <div class="add-circle">
-                <icon-add-circle-outline/>
-              </div>
-            </farm-inline>
-          </div>
-          <div>
-            <h5>Equipment</h5>
-            <farm-inline>
-              <farm-chip>SP300F Sprayer</farm-chip>
-              <farm-chip>Deere Tractor</farm-chip>
-              <div class="add-circle">
-                <icon-add-circle-outline/>
-              </div>
-            </farm-inline>
-          </div>
+          <h5>Areas</h5>
+          <farm-inline>
+            <farm-chip>North Field</farm-chip>
+            <div class="add-circle">
+              <icon-add-circle-outline/>
+            </div>
+          </farm-inline>
+          <h5>Assets</h5>
+          <farm-inline>
+            <farm-chip>Corn 2020</farm-chip>
+            <div class="add-circle">
+              <icon-add-circle-outline/>
+            </div>
+          </farm-inline>
+          <h5>Equipment</h5>
+          <farm-inline>
+            <farm-chip>SP300F Sprayer</farm-chip>
+            <farm-chip>Deere Tractor</farm-chip>
+            <div class="add-circle">
+              <icon-add-circle-outline/>
+            </div>
+          </farm-inline>
         </farm-stack>
       </farm-card>
       <farm-card
         :breakpoints="breakpoints"
         :boxShadow="cardBoxShadow"
         class="spray-log-card">
-        <farm-stack>
+        <farm-stack space="1rem">
           <h5>Team</h5>
           <farm-inline>
             <farm-chip color="green">Bob Smith</farm-chip>
@@ -135,7 +144,7 @@
         </farm-stack>
       </farm-card>
       <farm-card>
-        <farm-stack>
+        <farm-stack space="1rem">
           <h5>Notes</h5>
           <p class="notes">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
@@ -170,6 +179,13 @@ export default {
 
 .spray-log-card {
   border: 1px solid #eee;
+}
+h5, p {
+  margin-bottom: 0;
+}
+
+.spray-details {
+  font-size: 1rem;
 }
 
 .inline {
