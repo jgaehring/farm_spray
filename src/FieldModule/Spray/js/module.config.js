@@ -26,4 +26,12 @@ export default {
       },
     },
   ],
+  filters: {
+    log: {
+      log_category(cat, i, cats) {
+        const { tid } = cats.find(c => c.name === 'Spray');
+        return cat.name === 'Spray' || cat.parents_all.some(parent => parent.id === tid);
+      },
+    },
+  },
 };
