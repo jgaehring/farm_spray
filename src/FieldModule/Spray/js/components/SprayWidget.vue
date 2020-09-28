@@ -6,10 +6,9 @@
       <div class="scroll-x" :style="scrollStyle">
         <farm-card
           class="spray-card"
-          boxShadow="-1px 2px 6px rgba(0, 0, 0, 0.25)"
-          width="12rem"
-          space=".75rem"
-          marginLeft="1rem">
+          boxShadow="strong"
+          width="s"
+          space="s">
           <p class="name">
             Pre Emerge - North Field - 2020 Corn
           </p>
@@ -19,9 +18,9 @@
         </farm-card>
         <farm-card
           class="spray-card"
-          boxShadow="-1px 2px 6px rgba(0, 0, 0, 0.25)"
-          width="12rem"
-          space=".75rem">
+          boxShadow="strong"
+          width="s"
+          space="s">
           <p class="name">
             Post Emerge - North Field - 2020 Corn
           </p>
@@ -31,9 +30,9 @@
         </farm-card>
         <farm-card
           class="spray-card"
-          boxShadow="-1px 2px 6px rgba(0, 0, 0, 0.25)"
-          width="12rem"
-          space=".75rem">
+          boxShadow="strong"
+          width="s"
+          space="s">
           <p class="name">
             Post Emerge - East Field - 2020 Beans
           </p>
@@ -82,28 +81,28 @@ export default {
 .fade-left {
   position: absolute;
   top: 0px;
-  left: -1rem;
+  left: calc(var(--s) * -1);
   height: 100%;
-  width: 1rem;
+  width: var(--s);
   z-index: 10;
-  background: linear-gradient(to left, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1) 50%);
+  background: linear-gradient(to left, rgba(255, 255, 255, 0), var(--white) 50%);
 }
 .fade-right {
   position: absolute;
   top: 0px;
-  right: -1rem;
+  right: calc(var(--s) * -1);
   height: 100%;
-  width: 1rem;
+  width: var(--s);
   z-index: 10;
-  background: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 1) 50%);
+  background: linear-gradient(to right, rgba(255, 255, 255, 0), var(--white) 50%);
 }
 
 .spray-card-container {
   white-space: nowrap;
   overflow: hidden;
-  padding: .5rem 1rem;
-  margin-left: -1rem;
-  margin-right: -1rem;
+  padding: var(--xs) var(--s);
+  margin-left: calc(var(--s) * -1);
+  margin-right: calc(var(--s) * -1);
   height: 6.25rem;
 }
 .scroll-x {
@@ -111,9 +110,9 @@ export default {
   overflow-y: hidden;
   box-sizing: content-box;
   height: 100%;
-  margin-right: -1rem;
-  margin-left: -1rem;
-  padding-left: 1rem;
+  margin-right: calc(var(--s) * -1);
+  margin-left: calc(var(--s) * -1);
+  padding-left: var(--s);
 }
 .spray-card {
   display: inline-block;
