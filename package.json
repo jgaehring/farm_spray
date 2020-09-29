@@ -34,7 +34,7 @@
     "eslint-loader": "^4.0.0",
     "eslint-plugin-import": "^2.20.1",
     "eslint-plugin-vue": "^6.2.2",
-    "farmos-client": "github:farmOS/farmOS-client#field-module",
+    "farmos-client": "github:farmOS/farmOS-client",
     "friendly-errors-webpack-plugin": "^1.7.0",
     "html-webpack-plugin": "^4.0.4",
     "portfinder": "^1.0.25",
