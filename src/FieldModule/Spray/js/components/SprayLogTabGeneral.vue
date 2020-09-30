@@ -3,7 +3,7 @@
     <farm-tiles
       :columns="[1, 2, 3]"
       :breakpoints="breakpoints"
-      :space="['0', '1rem']">
+      :space="['none', 's']">
       <farm-log-main-info
         :name="'Pre Emerge - North Field - Corn 2020'"
         :done="false"
@@ -12,7 +12,7 @@
         :breakpoints="breakpoints"
         :boxShadow="cardBoxShadow"
         class="spray-log-card">
-        <farm-stack space="1rem">
+        <farm-stack space="s">
           <h5>Duration</h5>
           <farm-inline justifyContent="space-around" class="inline">
             <div class="division-bar" :flex="divisionBarFlex">
@@ -46,7 +46,7 @@
         :breakpoints="breakpoints"
         :boxShadow="cardBoxShadow"
         class="spray-log-card">
-        <farm-stack space="1rem">
+        <farm-stack space="s">
           <h5>Spray Rate</h5>
           <farm-inline>
             <div flex="1 1 auto">
@@ -103,7 +103,7 @@
         :breakpoints="breakpoints"
         :boxShadow="cardBoxShadow"
         class="spray-log-card">
-        <farm-stack space="1rem">
+        <farm-stack space="s">
           <h5>Areas</h5>
           <farm-inline>
             <farm-chip>North Field</farm-chip>
@@ -132,7 +132,7 @@
         :breakpoints="breakpoints"
         :boxShadow="cardBoxShadow"
         class="spray-log-card">
-        <farm-stack space="1rem">
+        <farm-stack space="s">
           <h5>Team</h5>
           <farm-inline>
             <farm-chip color="green">Bob Smith</farm-chip>
@@ -144,7 +144,7 @@
         </farm-stack>
       </farm-card>
       <farm-card>
-        <farm-stack space="1rem">
+        <farm-stack space="s">
           <h5>Notes</h5>
           <p class="notes">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
@@ -162,7 +162,7 @@ export default {
   data() {
     return {
       breakpoints: [0, 750, 1050],
-      cardBoxShadow: ['none', '1px 2px 3px rgba(0, 0, 0, 0.25)'],
+      cardBoxShadow: ['none', 'normal'],
       divisionBarFlex: '1 1 auto',
     };
   },

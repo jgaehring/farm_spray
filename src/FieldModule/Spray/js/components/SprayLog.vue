@@ -1,5 +1,5 @@
 <template>
-  <div id="spray-log-screen">
+  <farm-main :space="['none', 's']">
 
     <farm-tabs :tabs="['General', 'Components']">
 
@@ -13,7 +13,7 @@
 
     </farm-tabs>
 
-  </div>
+  </farm-main>
 </template>
 
 <script>
@@ -25,10 +25,3 @@ export default {
   components: { SprayLogTabGeneral, SprayLogTabComponents },
 };
 </script>
-
-<style scoped>
-#spray-log-screen {
-  background-color: #eee;
-  height: calc(100vh - 3rem);
-}
-</style>
